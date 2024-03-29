@@ -4,10 +4,18 @@
 # дописав свой код в секции “YOUR CODE HERE”.
 
 def cache_deco(func):
-   # YOUR CODE HERE
+    cache = {}
+
+    def wrapper(args):
+        if args not in cache:
+            result = func(args)
+            cache[args] = result
+        return cache[args]
+
+    return wrapper
 
 code = []
 while data := input():
    code.append(data)
 code = "\n".join(code)
-exec(code) 
+exec(code)
