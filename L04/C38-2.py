@@ -8,7 +8,8 @@
 # остальной код можно оставить как есть:
 
 def map(func, seq):
-   # YOUR CODE HERE
+    for i in seq:
+        yield func(i)
 
 func_in, seq_in = eval(input()), eval(input())
 

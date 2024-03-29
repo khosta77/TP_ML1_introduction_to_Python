@@ -6,7 +6,9 @@
 # Вам нужно написать свой код в секции “YOUR CODE HERE”, остальной код можно оставить как есть: 
 
 def filter(func, seq):
-   # YOUR CODE HERE
+    for i in seq:
+        if func(i):
+            yield i
 
 func_in, seq_in = eval(input()), eval(input())
 
